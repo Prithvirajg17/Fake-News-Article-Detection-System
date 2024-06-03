@@ -1,0 +1,9 @@
+/* Hide the Streamlit branding in the footer */
+footer {visibility: hidden;}
+
+/* Hide the GitHub icon, star icon, and share option in the header */
+header [title^="View the source code on GitHub"],
+header [title^="Star this repo on GitHub"],
+header [title^="Share this app"] {
+    display: none !important;
+}
