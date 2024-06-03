@@ -1,5 +1,5 @@
+import streamlit as st
 import pandas as pd
-import sklearn
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
@@ -34,35 +34,21 @@ accuracy = accuracy_score(y_test, predictions)
 classification_report_result = classification_report(y_test, predictions)
 
 # Display the evaluation results
-#print(f'Accuracy: {accuracy}')
-#print('Classification Report:\n', classification_report_result)
+st.write(f'Accuracy: {accuracy}')
+st.write('Classification Report:\n', classification_report_result)
 
-# Take input from the user
-user_input = input("Enter a news article: ")
+# Streamlit app for user input
+st.title("Fake News Detection")
 
-# Make a prediction
-prediction = model.predict([user_input])
-
-
-# Streamlit UI
-st.title('News Classification')
-
-# Input block for user to enter news article
+# Text input for news article
 user_input = st.text_area("Enter a news article:")
 
-# Submit button
-if st.button('Submit'):
-    # Make prediction
-    prediction = predict_news(user_input)
-    
+# Button to submit the input
+if st.button("Submit"):
+    # Make a prediction
+    prediction = model.predict([user_input])
     # Display the prediction result
-    if prediction == 0:
+    if prediction[0] == 0:
         st.write("The news is likely to be true.")
     else:
         st.write("The news is likely to be fake.")
-
-# Display the prediction result
-if prediction[0] == 0:
-    print("The news is likely to be true.")
-else:
-    print("The news is likely to be fake.")
