@@ -34,8 +34,8 @@ accuracy = accuracy_score(y_test, predictions)
 classification_report_result = classification_report(y_test, predictions)
 
 # Display the evaluation results
-st.write(f'Accuracy: {accuracy}')
-st.write('Classification Report:\n', classification_report_result)
+#st.write(f'Accuracy: {accuracy}')
+#st.write('Classification Report:\n', classification_report_result)
 
 # Streamlit app for user input
 st.title("Fake News Detection")
