@@ -9,7 +9,7 @@ from sklearn.metrics import accuracy_score, classification_report
 
 st.markdown(hide_github_icon, unsafe_allow_html=True)
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-st.markdown(hide, unsafe_allow_html=True)
+st.markdown(hide_star_icon, unsafe_allow_html=True)
 
 
 
