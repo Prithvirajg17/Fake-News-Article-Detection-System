@@ -60,7 +60,7 @@ classification_report_result = classification_report(y_test, predictions)
 #st.write(f'Accuracy: {accuracy}')
 #st.write('Classification Report:\n', classification_report_result)
 
-# Streamlit app for user input
+# streamlit app
 st.title("Fake News Detection")
 
 # Text input for news article
@@ -72,6 +72,6 @@ if st.button("Submit"):
     prediction = model.predict([user_input])
     # Display the prediction result
     if prediction[0] == 0:
-        st.markdown("<h2 style='color: green;'>The news is likely to be true.</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color: green; text-align: center;'>The news is likely to be true.</h2>", unsafe_allow_html=True)
     else:
-        st.markdown("<h2 style='color: red;'>The news is likely to be fake.</h2>", unsafe_allow_html=True)
+        st.markdown("<h2 style='color: red; text-align: center;'>The news is likely to be fake.</h2>", unsafe_allow_html=True)
