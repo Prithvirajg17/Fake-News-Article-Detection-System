@@ -1,0 +1,23 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+headless = true
+
+[global]
+disableWatchdogWarning = true
+
+[runner]
+magicEnabled = false
+
+[deprecation]
+showfileUploaderEncodingWarning = false
+
+[logger]
+enableStreamlitLog = false
+
+[client]
+showStSuccessMessage = false
+
+[ui]
+hideStreamlitBranding = true
