@@ -61,7 +61,7 @@ classification_report_result = classification_report(y_test, predictions)
 #st.write('Classification Report:\n', classification_report_result)
 
 # streamlit app
-st.title("Fake News Detection")
+st.markdown("<h1 style='text-align: center;'>Fake News Detection</h1>", unsafe_allow_html=True)
 
 # Text input for news article
 user_input = st.text_area("Enter a news article:")
