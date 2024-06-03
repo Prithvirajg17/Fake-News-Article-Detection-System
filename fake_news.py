@@ -21,11 +21,6 @@ header [title^="Star this repo on GitHub"],
 header [title^="Share this app"] {
     display: none !important;
 }
-
-/* Hide the three-dot menu in the header */
-header [data-testid="stToolbar"] {
-    display: none !important;
-}
 </style>
 """
 
