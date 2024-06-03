@@ -42,6 +42,24 @@ user_input = input("Enter a news article: ")
 # Make a prediction
 prediction = model.predict([user_input])
 
+
+# Streamlit UI
+st.title('News Classification')
+
+# Input block for user to enter news article
+user_input = st.text_area("Enter a news article:")
+
+# Submit button
+if st.button('Submit'):
+    # Make prediction
+    prediction = predict_news(user_input)
+    
+    # Display the prediction result
+    if prediction == 0:
+        st.write("The news is likely to be true.")
+    else:
+        st.write("The news is likely to be fake.")
+
 # Display the prediction result
 if prediction[0] == 0:
     print("The news is likely to be true.")
