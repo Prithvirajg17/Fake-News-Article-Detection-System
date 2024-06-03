@@ -8,7 +8,6 @@ from sklearn.metrics import accuracy_score, classification_report
 
 
 st.markdown(hide_github_icon, unsafe_allow_html=True)
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # Function to add custom CSS
 def local_css(file_name):
