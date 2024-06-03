@@ -8,16 +8,29 @@ from sklearn.metrics import accuracy_score, classification_report
 
 
 #st.markdown(hide_github_icon, unsafe_allow_html=True)
-st.markdown(hide_st_style, unsafe_allow_html=True) 
+#st.markdown(hide_st_style, unsafe_allow_html=True) 
+# Custom CSS to hide the share, star, and menu options
+custom_css = """
+<style>
+/* Hide the Streamlit branding in the footer */
+footer {visibility: hidden;}
 
+/* Hide the GitHub icon, star icon, and share option in the header */
+header [title^="View the source code on GitHub"],
+header [title^="Star this repo on GitHub"],
+header [title^="Share this app"] {
+    display: none !important;
+}
 
-# Function to add custom CSS
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+/* Hide the three-dot menu in the header */
+header [data-testid="stToolbar"] {
+    display: none !important;
+}
+</style>
+"""
 
-# Call the function to load the CSS file
-local_css("style.css")
+# Inject custom CSS
+st.markdown(custom_css, unsafe_allow_html=True)
 
 # Your app code goes here
 
