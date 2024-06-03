@@ -48,7 +48,7 @@ if st.button("Submit"):
     # Make a prediction
     prediction = model.predict([user_input])
     # Display the prediction result
-    if prediction[0] == 0:
-        st.write("The news is likely to be true.")
+     if prediction[0] == 0:
+        st.markdown("<h2 style='color: green;'>The news is likely to be true.</h2>", unsafe_allow_html=True)
     else:
-        st.write("The news is likely to be fake.")
+        st.markdown("<h2 style='color: red;'>The news is likely to be fake.</h2>", unsafe_allow_html=True)
