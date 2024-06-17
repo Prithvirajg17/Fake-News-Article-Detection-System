@@ -1,5 +1,7 @@
 # Fake News Detection
 
+# App: `https://fake-news-article-detection-system-p5u2wbztfwkhcjrvy743m6.streamlit.app/#fake-news-detection`
+
 ## Project Description:
 This project is a web application built using Streamlit that detects fake news articles. The application utilizes a machine learning model trained on a dataset of true and fake news articles to classify whether a given news article is likely to be true or fake.
 
